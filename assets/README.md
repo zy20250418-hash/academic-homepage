@@ -1,0 +1,5 @@
+# 网站图片
+
+- 修理机甲的首页概念图和候选镜头 A、B、C 使用 AI 生成，供网页中的剪辑练习使用。
+- 三张海报及两张剧照来自小组 PPT 所引用的红果短剧材料。
+- 数字剪辑工位照片由 Klaus Eichler 拍摄，画面人物为 Max Mittelbach。网页版本经缩放和格式转换。[原始文件](https://commons.wikimedia.org/wiki/File:Max_Mittelbach_digital_editing_suite.jpg)采用 [CC BY-SA 3.0 DE](https://creativecommons.org/licenses/by-sa/3.0/de/deed.en) 授权。
