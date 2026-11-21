@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#101827">
   <meta name="description" content="从《精神小妹也要修机甲吗》首集出发，细读职业自主、对照三部星际漫剧，并追踪人机协作与平台分发。">
   <title>AI 漫剧如何被生产？｜CUS6044 多媒体研究</title>
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./site.js" defer></script>
+  <link rel="stylesheet" href="./styles.css?v=20261121-cut">
+  <script src="./site.js?v=20261121-cut" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">跳到正文</a>
@@ -40,8 +40,8 @@
         </div>
       </div>
       <figure class="hero-figure">
-        <img src="./assets/hero.webp" alt="原创概念图中的维修技师在深蓝色机库里检修大型机甲" width="1536" height="1024" fetchpriority="high">
-        <figcaption>原创概念图 · AI 生成</figcaption>
+        <img src="./assets/cover-mecha.webp" alt="参考剧集海报和首集角色造型生成的雨中机甲维修概念图" width="1672" height="941" fetchpriority="high">
+        <figcaption>AI 概念图 · 参考原作海报与剧照</figcaption>
       </figure>
       <div class="wrap hero-bottom">
         <span>研究范围</span>
@@ -52,40 +52,50 @@
     </section>
 
     <section class="edit-lab" id="edit-lab" aria-labelledby="edit-title">
-      <div class="wrap section">
-        <div class="section-head">
+      <div class="wrap cut-layout">
+        <div class="section-head cut-heading">
           <div>
             <p class="kicker">互动剪辑台</p>
-            <h2 id="edit-title">哪一格能接下去？</h2>
+            <h2 id="edit-title">把一场维修戏剪出来</h2>
           </div>
-          <p>你在剪一场机甲维修戏。上一镜里，技师穿深蓝工作服，朝画面右侧的维修舱伸手。选一个近景接上去，看看动作方向和服装是否连贯。</p>
+          <p>更换景别、选择维修结果，再调整镜头停留的时间。你的选择会立刻出现在监看画面和时间线里。</p>
         </div>
-        <div class="edit-workspace" data-edit-lab>
-          <figure class="edit-source">
-            <img src="./assets/hero.webp" alt="上一镜，穿深蓝工作服的技师朝右检修亮着黄灯的维修舱" width="1536" height="1024" loading="lazy">
-            <figcaption>上一镜 · 机库全景</figcaption>
+        <div class="edit-workspace" data-cut-stage>
+          <figure class="monitor" aria-label="剪辑预览">
+            <div class="monitor-picture">
+              <img data-monitor src="./assets/cut-open.webp" alt="技师在机甲维修舱前检查接头" width="832" height="466" loading="lazy">
+              <span class="monitor-tag" data-monitor-state>当前镜头</span>
+            </div>
+            <figcaption><span data-monitor-caption>机库全景</span><span data-monitor-time aria-hidden="true"></span></figcaption>
           </figure>
-          <div class="edit-choices">
-            <p class="choice-title" id="choice-title">选择下一镜</p>
-            <div class="take-grid" role="group" aria-labelledby="choice-title">
-              <button class="take" type="button" data-take="match" aria-pressed="false">
-                <img src="./assets/take-a.webp" alt="深蓝工作服的技师朝右检修" loading="lazy">
-                <span>候选 A</span>
-              </button>
-              <button class="take" type="button" data-take="costume" aria-pressed="false">
-                <img src="./assets/take-b.webp" alt="浅色工作服的技师朝右检修" loading="lazy">
-                <span>候选 B</span>
-              </button>
-              <button class="take" type="button" data-take="direction" aria-pressed="false">
-                <img src="./assets/take-c.webp" alt="深蓝工作服的技师朝左检修" loading="lazy">
-                <span>候选 C</span>
-              </button>
+          <div class="edit-choices" data-cut-interaction hidden>
+            <div class="cut-steps" role="group" aria-label="剪辑步骤">
+              <button type="button" data-step="0" aria-current="step">1 选景别</button>
+              <button type="button" data-step="1" disabled>2 选结果</button>
+              <button type="button" data-step="2" disabled>3 定节奏</button>
+            </div>
+            <h3 data-cut-question tabindex="-1">下一镜想让观众看清什么？</h3>
+            <div class="take-grid" role="group" aria-label="当前步骤的选项">
+              <button class="take" type="button" data-cut-option="0" aria-pressed="false"><span class="take-visual"><img alt="" hidden><span class="rhythm-meter" hidden aria-hidden="true"></span></span><span data-option-label></span></button>
+              <button class="take" type="button" data-cut-option="1" aria-pressed="false"><span class="take-visual"><img alt="" hidden><span class="rhythm-meter" hidden aria-hidden="true"></span></span><span data-option-label></span></button>
+            </div>
+            <p class="edit-feedback" data-cut-feedback role="status">先选一个景别，比较观众能看到的信息。</p>
+            <div class="cut-buttons">
+              <button class="button primary" type="button" data-cut-next disabled>下一步</button>
+              <button class="button secondary" type="button" data-cut-reset>重新剪辑</button>
             </div>
           </div>
         </div>
-        <p class="edit-feedback" id="edit-feedback" role="status"><strong>剪辑判断</strong> <span>选中一格后，这里会显示它接到上一镜的效果。</span></p>
-        <p class="edit-credit">本网站原创 AI 演示画面。练习依据研究中的镜头筛选工序设计。<a class="ref" href="#source-cui">[4]</a></p>
-        <noscript><p>候选 A 延续了深蓝工作服和朝右的动作。候选 B 改变了服装，候选 C 改变了画面方向。</p></noscript>
+        <div class="cut-timeline" data-cut-timeline hidden>
+          <div class="timeline-head"><span>镜头时间线</span><span data-cut-total>已选 1 个镜头</span></div>
+          <div class="timeline-clips" role="group" aria-label="点击回看片段">
+            <button type="button" class="timeline-clip" data-clip="0"><strong>机库全景</strong><span>开场</span></button>
+            <button type="button" class="timeline-clip" data-clip="1" disabled><strong>动作镜头</strong><span>待选择</span></button>
+            <button type="button" class="timeline-clip" data-clip="2" disabled><strong>维修结果</strong><span>待选择</span></button>
+          </div>
+        </div>
+        <p class="edit-credit">参考原作视觉设计生成的练习画面。剪辑环节依据承制团队研究设计。<a class="ref" href="#source-cui">[4]</a></p>
+        <noscript><p>开启 JavaScript 后可以操作剪辑台。</p></noscript>
       </div>
     </section>
 
