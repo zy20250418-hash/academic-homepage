@@ -128,6 +128,8 @@ button { font: inherit; }
 .edit-feedback { min-height: 2.8em; color: #d3e1f4; font-size: clamp(.86rem, 1.05vw, 1rem); line-height: 1.55; }
 .cut-buttons { display: flex; flex-wrap: wrap; gap: .5rem; align-self: end; }
 .cut-buttons .button { min-height: 40px; padding-block: .45rem; cursor: pointer; }
+.cut-buttons .button.secondary { background: #253c56; color: var(--white); }
+.cut-buttons .button.secondary:hover { background: #334f70; }
 .cut-buttons .button:disabled { background: #52677f; color: #deebfb; cursor: not-allowed; }
 .cut-timeline { padding: .55rem .65rem .65rem; border: 1px solid #526d8b; border-radius: 8px; background: #101d2e; }
 .timeline-head { display: flex; justify-content: space-between; gap: .6rem; margin-bottom: .32rem; color: #cddef4; font-size: .83rem; font-weight: 690; }
